@@ -1,3 +1,6 @@
-streamlit>=1.35.0
+streamlit
 google-genai
-anthropic>=0.25.0
+anthropic
+pypdf
+beautifulsoup4
+requests
