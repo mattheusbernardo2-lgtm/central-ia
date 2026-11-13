@@ -37,7 +37,7 @@ if botao_executar:
         
         prompt_gemini_1 = f"Você é o Engenheiro Propositor. Apresente uma solução técnica, estruturada e direta para o seguinte caso:\n\n{problema}"
         resposta_gemini = client_gemini.models.generate_content(
-            model='gemini-2.5-flash',
+            model='gemini-3.8-flash',
             contents=prompt_gemini_1
         ).text
     except Exception as e:
@@ -87,7 +87,7 @@ Críticas e correções do Auditor: {resposta_claude}
 
 Reescreva a solução final corrigindo rigorosamente todos os pontos levantados pelo Auditor."""
                     solucao_final = client_gemini.models.generate_content(
-                        model='gemini-2.5-flash',
+                        model='gemini-3.8-flash',
                         contents=prompt_refinamento
                     ).text
                     status.update(label="Resolução finalizada com sucesso!", state="complete")
